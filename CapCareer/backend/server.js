@@ -1,16 +1,22 @@
-const express = require('express');
-const routes = require('./routes');
+const express = require("express");
+const bodyParser = require("body-parser");
 
 const app = express();
-const PORT = 3000;
 
-app.use(express.json());
-app.use('/', routes);
+// parse requests of content-type: application/json
+app.use(bodyParser.json());
 
-app.listen(PORT, (error) => {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log(`Server started and listening on port ${PORT} ... `);
-    }
+// parse requests of content-type: application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// simple route
+app.get("/", (req, res) => {
+    res.json({ message: "Hello FIW!" });
+});
+
+require("./app/routes/job_post_wizard.route.js")(app);
+
+// set port, listen for requests
+app.listen(3000, () => {
+    console.log("Server is running on port 3000.");
 });

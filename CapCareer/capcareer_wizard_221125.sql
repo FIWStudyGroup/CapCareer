@@ -27,7 +27,7 @@ CREATE TABLE `answer` (
 INSERT INTO `answer` (`id`, `answer`) VALUES
 (1, 'Ich gehe begeistert an Herausforderungen ran und arbeite mich schnell in neue Themengebieten ein'),
 (2, 'Ich gehe die Herausforderungen an und versuche neue Aufgaben solide umzusetzten. '),
-(3, ' Ich hole mir gerne Unterst?tzung hinzu, da mich neue Herausforderungen auch mal ?berfordern k?nnen.');
+(3, 'Ich hole mir gerne Unterstuetzung hinzu, da mich neue Herausforderungen auch mal ueberfordern koennen.');
 
 
 --
@@ -54,7 +54,7 @@ CREATE TABLE `job_post_wizard` (
 --
 
 INSERT INTO `job_post_wizard` (`id`, `ref`, `title`, `description`, `url`) VALUES
-(00001, '150612', 'Softwareentwickler (w/m/d)', 'Du m?chtest den gesamten Software-Entwicklungsprozess verstehen und gesch?ftskritische Individualsoftware auf h?chstem Niveau gestalten? Du sucht eine Zukunft im Software Engineering in einem global agierenden Unternehmen? Dann werde als Softwareentwickler (w/m/d) Teil unseres Teams!\n\nDiese Stelle ist in Vollzeit sowie in Teilzeit zu besetzen.\n\nDein neuer Job\n\n    Agile Entwicklung in abwechslungsreichen und innovativen Softwareprojekten f?r Branchenf?hrer.\n    Zeige deine Coding Skills mit Technologien wie Spring Boot, Docker, Kubernetes, Angular, Cloud und Microservices - oder lerne bei uns wie es geht.\n    Entdecke alle Facetten des Software Engineerings von der Planung bis zum Betrieb: Konzepte, Implementierung, Testen und Kundenkontakt.\n    Bei uns z?hlt, was man sagt, nicht wer es sagt - durch unsere flachen Hierarchien bekommst du schnell die Freiheit, selbst zu gestalten und Verantwortung zu ?bernehmen.\n    Im Team (weiter-)entwickeln - Wir setzen auf die St?rke der Teamarbeit und profitieren von internen Communitys.\n\nDein Profil\n\n    Dein abgeschlossenes Studium in Informatik, Wirtschaftsinformatik oder einem anderen MINT-Fach hat dich neugierig auf die Softwareentwicklung gemacht? Oder du willst als IT-affine/r Quereinsteiger*in bei uns starten? Klasse!\n    Du konntest schon erste Erfahrungen im Programmieren sammeln, z. B. mit Java, JavaScript oder C# und bist bereit weitere Skills aufzubauen.\n    Dein hohes Qualit?tsbewusstsein und agiles Mindset verbindest du mit Kommunikationsst?rke und Teamplayer-Mentalit?t, du hast Freude daran Wissen aufzubauen und zu teilen.\n    Du hast gute Deutsch- und Englischkenntnisse', 'https://www.capgemini.com/de-de/jobs/MGmSa4MBp4DrZzPZiZxC/softwareentwickler-wmd/'),
+(00001, '150612', 'Softwareentwickler (w/m/d)', 'Du moechtest den gesamten Software-Entwicklungsprozess verstehen und geschaeftskritische Individualsoftware auf hoechstem Niveau gestalten? Du sucht eine Zukunft im Software Engineering in einem global agierenden Unternehmen? Dann werde als Softwareentwickler (w/m/d) Teil unseres Teams!\n\nDiese Stelle ist in Vollzeit sowie in Teilzeit zu besetzen.\n\nDein neuer Job\n\n    Agile Entwicklung in abwechslungsreichen und innovativen Softwareprojekten f?r Branchenf?hrer.\n    Zeige deine Coding Skills mit Technologien wie Spring Boot, Docker, Kubernetes, Angular, Cloud und Microservices - oder lerne bei uns wie es geht.\n    Entdecke alle Facetten des Software Engineerings von der Planung bis zum Betrieb: Konzepte, Implementierung, Testen und Kundenkontakt.\n    Bei uns z?hlt, was man sagt, nicht wer es sagt - durch unsere flachen Hierarchien bekommst du schnell die Freiheit, selbst zu gestalten und Verantwortung zu ?bernehmen.\n    Im Team (weiter-)entwickeln - Wir setzen auf die St?rke der Teamarbeit und profitieren von internen Communitys.\n\nDein Profil\n\n    Dein abgeschlossenes Studium in Informatik, Wirtschaftsinformatik oder einem anderen MINT-Fach hat dich neugierig auf die Softwareentwicklung gemacht? Oder du willst als IT-affine/r Quereinsteiger*in bei uns starten? Klasse!\n    Du konntest schon erste Erfahrungen im Programmieren sammeln, z. B. mit Java, JavaScript oder C# und bist bereit weitere Skills aufzubauen.\n    Dein hohes Qualit?tsbewusstsein und agiles Mindset verbindest du mit Kommunikationsst?rke und Teamplayer-Mentalit?t, du hast Freude daran Wissen aufzubauen und zu teilen.\n    Du hast gute Deutsch- und Englischkenntnisse', 'https://www.capgemini.com/de-de/jobs/MGmSa4MBp4DrZzPZiZxC/softwareentwickler-wmd/'),
 (00003, 'julia_0', 'Business Analyst BTS (w/m/d)', 'BTS = Business and Technology Solutions, nach Branchen ausgerichtet, vornehmlich Beratung, Prozessanalyse', 'hier URL'),
 (00004, 'julia_1', 'Business Analyst C&CA (w/m/d)', 'C&CA = Cloud & Custom Applications, besch?ftigt sich vornehmlich mit der Entwicklung von Individualsoftware', 'hier URL'),
 (00005, 'julia_2', 'UX-Professional (w/m/d)', 'Ein Usability & UX Professional - im Folgenden f?r die Lesbarkeit als UX Professional zusammengefasst - k?mmert sich um die Nutzungsqualit?t von interaktiven Systemen sowie um die Erlebnisse der Benutzer vor, w?hrend und nach der Benutzung. Es gibt eine Vielzahl von Handlungsfeldern, in denen Aktivit?ten von UX Professional ben?tigt werden. Je nach Qualifikation und Erfahrung spezialisieren sich UX Professionals auf ein oder mehrere Rollen. Der Fokus des Berufsfeldes Usability/UX liegt auf den T?tigkeiten von UX Professionals in den Aufgaben im Sinne des menschzentrierten Gestaltungsprozesses, wie er in der DIN EN ISO 9241-210 beschrieben ist: MANAGEMENT - Planung und Auswahl der nutzerzentrierten Methoden Strategie f?r Human-centered Design in Unternehmen, Portfolio- und Produktplanung mit Fokus auf Usability/UX, Festlegen, Einf?hren und Betreiben von nutzerzentrierten Aktivit?ten in Produkt-, Service- und Systemgestaltung. RESEARCH - Analyse des Problems\nErheben von Nutzungskontexten sowie ableiten von Nutzungsanforderungen entlang identifizierter Erfordernisse \nKONZEPTION, SPEZIFIKATION & DESIGN - Gestaltungsalternative planen, entwerfen und umsetzen\nKonzipieren, Spezifizieren und Umsetzung von L?sungen und der Interaktion zwischen Mensch und System bis hin zur L?sung\nEVALUATION - Gestaltungsl?sungen aus Benutzerperspektive bewerten\nDurchf?hren von Usability-Inspektionen (ohne Benutzer) und Usability-Tests (mit Benutzern)\nDerzeit existiert eine Vielzahl an Jobtitel (u.a. UX Designer, UI Designer, UX Engineer, UX Manager, UI Designer, Product Owner, User Researcher, UX Specialist, u.v.m.) unter denen UX Professionals einzelne oder mehrere der beschriebenen Aufgaben im Rahmen von Entwicklungsprojekten wahrnehmen. \nDie unterschiedlichen T?tigkeiten innerhalb der oben genannten Aufgaben werden anhand von professionellen Rollen beschrieben, die sich durch unterschiedliche Methoden, Werkzeuge und ben?tigte Qualifikation und Erfahrung differenzieren. \nEs besteht kein Anspruch auf Vollst?ndigkeit. Die beispielhaften Rollen werden st?ndig weiter konkretisiert und beschrieben.', 'https://germanupa.de/wissen/berufsbild'),
@@ -111,14 +111,14 @@ INSERT INTO `skill` (`id`, `skill`) VALUES
 (0001, 'technikbegeistert'),
 (0002, 'verantwortungsbewusst'),
 (0003, 'organisiert'),
-(0004, 'selbstst?ndig'),
+(0004, 'selbststaendig'),
 (0005, 'analytisch'),
 (0006, 'lernbereitschaft'),
-(0007, 'Abstraktionsverm?gen'),
+(0007, 'Abstraktionsvermoegen'),
 (0008, 'schnelle Auffassungsgabe'),
 (0009, 'kreativ'),
 (0010, 'teamplayer'),
-(0011, 'l?st gerne knifflige Probleme'),
+(0011, 'loest gerne knifflige Probleme'),
 (0012, 'mutig'),
 (0013, 'selbstbewusst'),
 (0014, 'detailorientiert'),
@@ -128,11 +128,11 @@ INSERT INTO `skill` (`id`, `skill`) VALUES
 (0018, 'Einzelgaenger'),
 (0019, 'bodenstaendig'),
 (0020, 'Reisebereitschaft'),
-(0021, 'Analysef?higkeit Prozesse'),
-(0022, 'Fachliches Verst?ndnis'),
+(0021, 'Analysefaehigkeit Prozesse'),
+(0022, 'Fachliches Verstaendnis'),
 (0023, 'Datenanalyse'),
-(0024, 'Linguistisches Verst?ndnis'),
-(0025, 'Entscheidungsf?higkeit'),
+(0024, 'Linguistisches Verstaendnis'),
+(0025, 'Entscheidungsfaehigkeit'),
 (0026, 'Priorisierung'),
 (0027, 'Zeitmanagement');
 

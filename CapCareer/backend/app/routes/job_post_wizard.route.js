@@ -8,13 +8,16 @@ module.exports = app => {
     app.get("/job_post_wizard", job_post_wizard.findAll);
 
     // GET one single JobPostWizard with job_post_wizardId
-    app.get("/job_post_wizard/:job_post_wizardId", job_post_wizard.findOne);
+    app.get("/job_post_wizard/id:job_postId", job_post_wizard.findOneId);
+
+        // // GET one single JobPostWizard with job_post_wizardId
+        // app.get("/job_post_wizard/ref/:job_postRef", job_post_wizard.findOneRef);
 
     // Update one JobPostWizard with job_post_wizardId
-    app.put("/job_post_wizard/:job_post_wizardId", job_post_wizard.update);
+    app.put("/job_post_wizard/:job_postId", job_post_wizard.update);
 
     // Delete the JobPostWizard with job_post_wizardId
-    app.delete("/job_post_wizard/:job_post_wizardId", job_post_wizard.delete);
+    app.delete("/job_post_wizard/:job_postId", job_post_wizard.delete);
 
     // Delete all job_post_wizard
     app.delete("/job_post_wizard", job_post_wizard.deleteAll);

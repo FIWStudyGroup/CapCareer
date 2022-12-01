@@ -8,6 +8,7 @@ const JobPost = function(job_post) {
 	this.url = job_post.url;
 };
 
+
 JobPost.create = (newJobPost, result) => {
     sql.query("INSERT INTO job_post_wizard SET ?", newJobPost, (err, res) => {
         if (err) {
@@ -39,6 +40,25 @@ JobPost.findById = (job_postId, result) => {
         result({ kind: "not_found" }, null);
     });
 };
+
+// JobPost.findByRef = (job_postRef, result) => {
+//     sql.query(`SELECT * FROM job_post_wizard WHERE ref = ${job_postRef}`, (err, res) => {
+//         if (err) {
+//             console.log("error: ", err);
+//             result(err, null);
+//             return;
+//         }
+
+//         if (res.length) {
+//             console.log("found job_post: ", res[0]);
+//             result(null, res[0]);
+//             return;
+//         }
+
+//         // not found JobPost with the ref
+//         result({ kind: "not_found" }, null);
+//     });
+// };
 
 JobPost.getAll = result => {
     sql.query("SELECT * FROM job_post_wizard", (err, res) => {

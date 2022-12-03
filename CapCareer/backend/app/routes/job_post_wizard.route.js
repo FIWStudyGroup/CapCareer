@@ -22,3 +22,31 @@ module.exports = app => {
     // Delete all job_post_wizard
     app.delete("/job_post_wizard", job_post_wizard.deleteAll);
 };
+
+/* const express = require('express');
+const router = express.Router();
+module.exports = router;
+//
+    const job_post_wizard = require("../controller/job_post_wizard.controller.js");
+
+    // Create a new JobPostWizard
+    router.post("/job_post_wizard", job_post_wizard.create);
+
+    // GET all JobPostWizards
+    router.get("/job_post_wizard", job_post_wizard.findAll);
+
+    // GET one single JobPostWizard with job_post_wizardId
+    router.get("/job_post_wizard/id:job_postId", job_post_wizard.findOneId);
+
+        // // GET one single JobPostWizard with job_post_wizardId
+        // router.get("/job_post_wizard/ref/:job_postRef", job_post_wizard.findOneRef);
+
+    // Update one JobPostWizard with job_post_wizardId
+    router.put("/job_post_wizard/:job_postId", job_post_wizard.update);
+
+    // Delete the JobPostWizard with job_post_wizardId
+    router.delete("/job_post_wizard/:job_postId", job_post_wizard.delete);
+
+    // Delete all job_post_wizard
+    router.delete("/job_post_wizard", job_post_wizard.deleteAll);
+//}; */

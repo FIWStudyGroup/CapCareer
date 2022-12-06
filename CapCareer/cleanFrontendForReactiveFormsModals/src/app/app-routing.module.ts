@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateComponent } from './create/create.component';
 import { DetailComponent } from './detail/detail.component';
 import { HomeComponent } from './home/home.component';
-import { TableComponent } from './table/table.component';
+import { TableComponent } from './table_jobs/table_jobs.component';
 
 const routes: Routes = [{
     path: "",
@@ -19,7 +19,7 @@ const routes: Routes = [{
     component: CreateComponent
   },
   {
-    path: "member/:id",
+    path: "detail",
     component: DetailComponent
   }];
 

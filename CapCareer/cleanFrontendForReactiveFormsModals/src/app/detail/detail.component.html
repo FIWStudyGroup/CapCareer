@@ -1,1 +1,27 @@
-<p>detail works!</p>
+<main class="d-flex min-vh-100">
+    <fieldset class="container  mt-5">
+        <legend *ngIf="question" class="mb-4">Eintrag von {{ question.id }} {{ question.question }} aktualisieren
+        </legend>
+        <legend *ngIf="!question" class="mb-4">Eintrag aktualisieren</legend>
+        <form [formGroup]="form" (ngSubmit)="readOneQuestion(id)">
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="id">ID</label>
+                <input type="text" class="col-10 form-control" id="id" placeholder="ID" formControlName="idControl">
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="question">Frage</label>
+                <input type="text" class="col-10 form-control" id="question" placeholder="Frage" formControlQuestion="questionControl">
+            </div>
+/*            <div class="form-group row">
+                <label class="col-2 col-form-label" for="email">E-Mail</label>
+                <input type="email" class="col-10 form-control" id="email" placeholder="E-Mail" formControlName="emailControl">
+
+            </div>*/
+            <div class="form-group row  justify-content-end">
+                <button type="submit" class="col-4 btn btn-secondary">Aktualisieren</button>
+                <div class="col-2"></div>
+                <button type="button" class="col-4 btn btn-secondary" (click)="cancel() ">Abbrechen</button>
+            </div>
+        </form>
+    </fieldset>
+</main>

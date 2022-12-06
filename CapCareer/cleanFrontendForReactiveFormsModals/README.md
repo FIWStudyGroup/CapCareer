@@ -1,3 +1,15 @@
+# Bekannte Probleme:
+
+- nach Ausführen von "ng add ngx-bootstrap" funktioniert ng serve nicht mehr, Fehler: " An unhandled exception occurred: ENOENT: no such file or directory, lstat 'C:\Users\al_ni\Projekte\capcareer_project\CapCareer\cleanFrontendForReactiveFormsModals\dist'
+See "C:\Users\al_ni\AppData\Local\Temp\ng-guWsD1\angular-errors.log" for further details."
+Lässt sich beheben, indem in angular.json der (währenbd der installation falsch angegebene) Pfad geändert wird in
+"styles": [
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+statt ./dist... etc.
+
 # CleanFrontendForReactiveFormsModals
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.

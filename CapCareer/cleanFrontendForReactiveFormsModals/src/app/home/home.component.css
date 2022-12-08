@@ -1,0 +1,13 @@
+#main {
+    background-image: url('https://media-exp1.licdn.com/dms/image/C4D22AQHMaEuUFEbHnA/feedshare-shrink_2048_1536/0/1663690203546?e=2147483647&v=beta&t=kDio6BwQPnUKsMSw9kwWvC-J7qBJpvjqTtYH02FaSqM');
+    width: auto;
+    height: 60rem;
+    background-size: 100% 100%;
+}
+
+.modal-content, .modal {
+
+    background-image: none;
+}
+
+

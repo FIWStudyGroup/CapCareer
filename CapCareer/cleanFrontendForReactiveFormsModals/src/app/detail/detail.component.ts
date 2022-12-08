@@ -14,7 +14,7 @@ import { Answer } from '../shared/answer';
 })
 export class DetailComponent implements OnInit {
 
-  id: string='';
+  id!: number;
   question!: Question;
   form: FormGroup;
   
@@ -35,11 +35,11 @@ export class DetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id') || '';
+    this.id = 2;
     this.readOneQuestion(this.id);
   }
 
-  readOneQuestion(id: string): void {
+  readOneQuestion(id: number): void {
     this.bs.getOneQuestion(id).subscribe(
     (
       response: Question) => {

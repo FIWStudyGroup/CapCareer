@@ -13,11 +13,14 @@ export class TableComponent implements OnInit {
   jobposts!: JobPost[];
   questions!: Question[];
   answers!: Answer[];
+  singlequestion!: Question;
+  id!: number;
 
   constructor(private bs: BackendService) { }
 
   ngOnInit(): void {
     this.readAll();
+    this.readOneQuestion();
   }
 
   readAll(): void {
@@ -47,6 +50,21 @@ export class TableComponent implements OnInit {
                 return this.answers;
         },
         error => console.log(error)
+      );      
+    }
+
+    readOneQuestion(): void {
+      
+      this.bs.getOneQuestion(this.id).subscribe(
+        (
+          response: Question) => {
+            this.singlequestion = response;
+            console.log(this.singlequestion);
+            return this.singlequestion;
+        },
+        error => console.log(error)
       );
     }
+
+
 }

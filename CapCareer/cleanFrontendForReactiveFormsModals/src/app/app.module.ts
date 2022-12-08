@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { TableComponent } from './table_jobs/table_jobs.component';
 import { CreateComponent } from './create/create.component';
 import { DetailComponent } from './detail/detail.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { DetailComponent } from './detail/detail.component';
     HomeComponent,
     TableComponent,
     CreateComponent,
-    DetailComponent
+    DetailComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

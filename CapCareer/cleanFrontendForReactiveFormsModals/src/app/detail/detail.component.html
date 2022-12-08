@@ -1,27 +1,78 @@
-<main class="d-flex min-vh-100">
-    <fieldset class="container  mt-5">
-        <legend *ngIf="question" class="mb-4">Eintrag von {{ question.id }} {{ question.question }} aktualisieren
-        </legend>
-        <legend *ngIf="!question" class="mb-4">Eintrag aktualisieren</legend>
-        <form [formGroup]="form" (ngSubmit)="readOneQuestion(id)">
-            <div class="form-group row">
-                <label class="col-2 col-form-label" for="id">ID</label>
-                <input type="text" class="col-10 form-control" id="id" placeholder="ID" formControlName="idControl">
-            </div>
-            <div class="form-group row">
-                <label class="col-2 col-form-label" for="question">Frage</label>
-                <input type="text" class="col-10 form-control" id="question" placeholder="Frage" formControlQuestion="questionControl">
-            </div>
-/*            <div class="form-group row">
-                <label class="col-2 col-form-label" for="email">E-Mail</label>
-                <input type="email" class="col-10 form-control" id="email" placeholder="E-Mail" formControlName="emailControl">
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-1">1</div>
+        <div class="col-md-1">2</div>
+        <div class="col-md-1">3</div>
+        <div class="col-md-1">4</div>
+        <div class="col-md-1">5</div>
+        <div class="col-md-1">6</div>
+        <div class="col-md-1">7</div>
+        <div class="col-md-1">8</div>
+        <div class="col-md-1">9</div>
+        <div class="col-md-1">10</div>
+        <div class="col-md-1">11</div>
+        <div class="col-md-1">12</div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">1-8</div>
+        <div class="col-md-4">9-12</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">1-4</div>
+        <div class="col-md-4">5-8</div>
+        <div class="col-md-4">9-12</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">1-6</div>
+        <div class="col-md-6">7-12</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-8">12 or 8</div>
+        <div class="col-sm-6 col-md-4">6 or 4</div>
+        </div>
+        <div class="row">
+        <div class="col-sm-6 col-md-4">50% or 33.4%</div>
+        <div class="col-sm-6 col-md-4">50% or 33.4%</div>
+        <div class="col-sm-6 col-md-4">50% or 33.4%</div>
+        </div>
+        <div class="row">
+        <div class="col-sm-6">.col-sm-6</div>
+        <div class="col-sm-6">.col-sm-6</div>
+        </div>
+</div> -->
 
-            </div>*/
-            <div class="form-group row  justify-content-end">
-                <button type="submit" class="col-4 btn btn-secondary">Aktualisieren</button>
-                <div class="col-2"></div>
-                <button type="button" class="col-4 btn btn-secondary" (click)="cancel() ">Abbrechen</button>
+
+<div class="container col-6">
+    <fieldset>
+        <!-- <legend *ngIf="question" class="col-md-7">Frage mit der ID {{ question.id }} : {{ question.question }}
+        </legend>
+        <legend *ngIf="!question" class="col-md-7">Leider kann die Frage nicht geladen werden!</legend> -->
+        
+        <form [formGroup]="form" (ngSubmit)="readOneQuestion(id)">
+            <div class="col-sm-12 form-group row">
+                <label class="col-2 col-form-label" for="question"></label>                
+                <textarea class="col-md-6 form-control" id="question" placeholder="Frage" formControlQuestion="questionControl">
+                    Hier sollte eine Frage dynamisch geladen werden.
+                </textarea>
             </div>
+            <div class="col-8 form-group row">  
+                <textarea class="col-sm-7 form-control" id="question" placeholder="Frage" formControlQuestion="questionControl">
+                    Hier sollte eine Antwort dynamisch geladen werden.
+                </textarea> 
+            </div>            
+                <div class="form-check form-check-reverse">
+                    <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+                    <label class="form-check-label" for="reverseCheck1">
+                      Reverse checkbox
+
+                    </label>
+                </div>
+                <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                <label class="btn btn-primary" for="btn-check">Single toggle</label>
+                  
+                <button type="button" class="col-2 btn btn-secondary" (click)="cancel()">Abbrechen</button>
+                <div class="col-1"></div>
+                        
         </form>
     </fieldset>
-</main>
+</div>

@@ -1,13 +1,17 @@
 const sql = require("./db.js");
 
-// constructor
+// Models repräsentieren Elemente einer Tabelle in der DB:
+// in diesem constructor werden der Instanz JobPost quasi die Attribute=Spalten der Tabelle job_post_wizard zugewiesen
+// und somit der Zugriff ermöglicht
 const JobPost = function(job_post) {
+    this.id = job_post.id;
     this.ref = job_post.ref;
     this.title = job_post.title;
     this.description = job_post.description;
 	this.url = job_post.url;
 };
 
+// im Folgenden werden für die Instanz JobPost Funktionen definiert, mit denen Abfragen an die DB erfolgen können
 
 JobPost.create = (newJobPost, result) => {
     sql.query("INSERT INTO job_post_wizard SET ?", newJobPost, (err, res) => {

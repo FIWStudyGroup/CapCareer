@@ -23,7 +23,7 @@ export class BackendService {
     return this.http.get<Answer[]>(this.baseUrl + 'answer');
   }
 
-  getOneQuestion(id: string): Observable<Question>{
-    return this.http.get<Question>(this.baseUrl + 'question/' + id);
+  getOneQuestion(id: number): Observable<Question>{
+    return this.http.get<Question>(this.baseUrl + 'question/id' + id);
   }
 }

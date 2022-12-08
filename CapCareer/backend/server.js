@@ -1,18 +1,20 @@
-const express = require("express");
-const cors = require('cors');
-const app = express();
+// Grundsätzliche Projektstruktur erstellt nach https://freiheit.f4.htw-berlin.de/2020/webtech/backend/, weil dort MySQL
 
-const bodyParser = require("body-parser"); 
+const express = require("express");
+const cors = require('cors'); // wichtig für Anbindung ans Backend, sonst werden Daten nicht angezeigt (cross origin)
+const app = express();
+const bodyParser = require("body-parser"); // ermöglicht Ausgabe als JSON (?)
 // enable cors for all requests
 app.use(cors());
 
-
+// hier wird dem express-'Server' gesagt, welche Routen es gibt und wo sie liegen
 require("./app/routes/job_post_wizard.route.js")(app);
 require("./app/routes/question.route.js")(app);
 require("./app/routes/answer.route.js")(app);
 require("./app/routes/skill.route.js")(app);
 
 // parse requests of content-type: application/json
+// HTTP-Anfragen in JSON parsen
 app.use(bodyParser.json());
 
 

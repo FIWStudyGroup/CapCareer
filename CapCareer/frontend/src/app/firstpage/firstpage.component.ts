@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./firstpage.component.css']
 })
 export class FirstpageComponent implements OnInit {
+ page = 1;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
 
+  }
+  quizPageNumber(){
+
+    this.page++;
+  }
 }

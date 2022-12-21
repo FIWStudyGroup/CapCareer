@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FirstpageComponent } from './firstpage/firstpage.component';
-import { SecondpageComponent } from './secondpage/secondpage.component';
+import { StartpageComponent } from './startpage/startpage.component';
 import { ThirdpageComponent } from './thirdpage/thirdpage.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { ThirdpageComponent } from './thirdpage/thirdpage.component';
     HeaderComponent,
     FooterComponent,
     FirstpageComponent,
-    SecondpageComponent,
+    StartpageComponent,
     ThirdpageComponent
   ],
   imports: [

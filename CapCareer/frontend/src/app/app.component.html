@@ -1,66 +1,7 @@
-<header >
-  <div style="height: 40px" >
-    <img src="../images/Logo.jpg" alt ="Logo" height="40px" width="100px">
-</div>
-</header>
+<app-header></app-header>
 
-<div class="p-5 text-center bg-image" style="
-      background-image: url('https://media-exp1.licdn.com/dms/image/C4D22AQHMaEuUFEbHnA/feedshare-shrink_2048_1536/0/1663690203546?e=2147483647&v=beta&t=kDio6BwQPnUKsMSw9kwWvC-J7qBJpvjqTtYH02FaSqM');
-
-      width: 100%;
-    height: 400px;
-    background-size: 100% 100%;">
-</div>
-    <!--<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">-->
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white" style="position: relative; top:  2px; right: 102px;">
-         <div style="background-image: linear-gradient(239deg,#007bbd,#003f61);
-         opacity: .9;
-         border-radius: 4px;
-         box-shadow: 0 25px 100px 0 rgba(0,0,0,.15);
-         display: -ms-flexbox;
-         display: flex;
-         -ms-flex-direction: column;
-         flex-direction: column;
-         -ms-flex-pack: center;
-         justify-content: center;
-         -ms-flex-align: start;
-         align-items: flex-start;
-         min-height: calc((280/16)*1rem);
-         margin-top: calc(-273px + 3rem);
-         width: 60%;
-         padding: 2rem;
-         flex: 0 0 auto;
-  ">
-   <h1 style="font-size: 40px; font-family: sans-serif;"  class="mb-3">CAPCAREER </h1>
-  </div>
-
-  <div>
-  <p >Du bist bereit, deine Expertise für eine nachhaltige und integrative Zukunft<br> einzusetzen und Teil einer globalen und
-             diversen Community zu werden? Dann<br> finde jetzt deinen neuen Job bei Capgemini. Get The Future You Want.
-            </p>
-          </div>
-          <div>
-          <button class="button button4"  title="Finde deinen Job!" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-             CapCareer ⟶
-           </button>
-        </div>
-    </div>
-
-
-<!-- Modal wizzard-->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true"  aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-centered-scrollable">
-    <app-firstpage></app-firstpage>
-  </div>
-</div>
+<app-startpage></app-startpage>
 
 <!--footer-->
-<footer class="bg-primary text-white text-center text-lg-start fixed-bottom">
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2022 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">CapCareer.com</a>
-  </div>
-</footer>
+<app-footer></app-footer>
 <router-outlet></router-outlet>
-

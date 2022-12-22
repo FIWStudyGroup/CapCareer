@@ -12,7 +12,8 @@ module.exports = app => {
     app.get("/job_post_wizard", job_post_wizard.findAll);
 
     // GET one single JobPostWizard with job_post_wizardId
-    app.get("/job_post_wizard/id:job_postId", job_post_wizard.findOneId);
+    
+    app.get("/job_post_wizard/:job_postId", job_post_wizard.findOneId);
 
         // // GET one single JobPostWizard with job_post_wizardRef
         // app.get("/job_post_wizard/ref/:job_postRef", job_post_wizard.findOneRef);

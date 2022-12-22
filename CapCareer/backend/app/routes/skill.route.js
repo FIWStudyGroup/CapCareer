@@ -8,7 +8,7 @@ module.exports = app => {
     app.get("/skill", skill.findAll);
 
     // GET one single Skill with skillId
-    app.get("/skill/id:skillId", skill.findOneId);
+    app.get("/skill/:skillId", skill.findOneId);
 
         // // GET one single Skill with skillId
         // app.get("/skill/skill/:skillSkill", skill.findOneSkill);

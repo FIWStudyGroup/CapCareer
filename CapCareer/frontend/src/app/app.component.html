@@ -1,7 +1,17 @@
 <app-header></app-header>
-
 <app-startpage></app-startpage>
 
-<!--footer-->
-<app-footer></app-footer>
+
+
+
+<!-- Modal wizzard-->
+<div class="modal fade bd-example-modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+  tabindex="-1" aria-hidden="true" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <app-firstpage></app-firstpage>
+  </div>
+</div>
+
+
 <router-outlet></router-outlet>
+<app-footer></app-footer>

@@ -8,7 +8,7 @@ module.exports = app => {
     app.get("/question", question.findAll);
 
     // GET one single Question with questionId
-    app.get("/question/id:questionId", question.findOneId);
+    app.get("/question/:questionId", question.findOneId);
 
         // // GET one single Question with questionId
         // app.get("/question/question/:questionQuestion", question.findOneQuestion);

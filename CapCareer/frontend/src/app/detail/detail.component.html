@@ -1,0 +1,26 @@
+<main class="d-flex min-vh-100">
+    <fieldset class="container  mt-5">
+        <legend *ngIf="singleJob" class="mb-4">Eintrag von {{ singleJob.ref }} {{ singleJob.title }}
+        </legend>
+        <legend *ngIf="!singleJob" class="mb-4">Job</legend>
+        <form [formGroup]="form" >
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="id">ID</label>
+                <input type="text" class="col-10 form-control" id="id" placeholder="ID" formControlName="idControl">
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="ref">Referenz</label>
+                <input type="text" class="col-10 form-control" id="ref" placeholder="Referenz" formControlName="refControl">
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label" for="email">Titel</label>
+                <input type="email" class="col-10 form-control" id="title" placeholder="Titel" formControlName="titleControl">
+
+            </div>
+            <div class="form-group row  justify-content-end">
+
+            </div>
+        </form>
+    </fieldset>
+</main>
+

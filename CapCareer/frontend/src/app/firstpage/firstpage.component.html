@@ -6,28 +6,29 @@
                     <img src="../assets/image/Logo.jpg" width="20%" alt="Logo">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <!--modal body-->
 
+                <!--modal body-->
                 <div class="modal-body">
 
-                    <div class="page1" *ngIf="page === 1">
-                        <h1 class="titelwizzard" style="color: #15011d;"></h1>
+                    <div class="begruessung" *ngIf="page === 1">
+                        <!-- <h1 class="titelwizzard" style="color: #15011d;">???</h1> -->
                         <p class="textwizzard" style="color: #15011d;">
                             Willkomen bei CapCareer, Ihr persönlicher Assistent, bei der Jobauswahl.<br>
                             Für AbsolventInnen, StudentInnen, BerufseinsteigerInnen.<br>
                             Sie durchlaufen einen 5min-Test, in dem Sie Fragen beantworten.<br>
                             Nach Abschluss des Tests werden Ihre Antworten ausgewertet <br>
                             und Sie erhalten eine individuelle Auswahl an Jobangeboten.</p>
+                            <!-- Footer auslagern -->
                         <div class="modal-footer">
-                            <button class="btn-los" data-bs-target="quizPageNumber()" data-bs-toggle="modal"
-                                data-bs-dismiss="modal" (click)="quizPageNumber()">
-                                Los geht⟶
+                            <!-- data-bs-target des Button ist die Variable page, deren Wert sich durch quizPageNumber() ergibt -->
+                            <button class="btn-los" data-bs-target="quizPageNumber()" data-bs-toggle="modal" data-bs-dismiss="modal" (click)="quizPageNumber()">
+                                Los geht's ⟶
                             </button>
                         </div>
                     </div>
 
 
-                    <div class="modal-body">
+                    <div class="modal-body"> <!-- -->
 
                         <div class="page2" *ngIf="page === 2">
                             <div class="progress">

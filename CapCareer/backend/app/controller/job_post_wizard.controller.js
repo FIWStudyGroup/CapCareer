@@ -1,4 +1,7 @@
+// Erzeugen einer Instanz, die sich auf das Model bezieht
 const JobPostWizard = require("../models/job_post_wizard.model.js");
+
+// Funktionen für die oben erzeugte Instanz, die ihrerseits die Funktionen des Models aufrufen
 
 // Create and Save a new JobPostWizard
 /* JSON-Bsp.

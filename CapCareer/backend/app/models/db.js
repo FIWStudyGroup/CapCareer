@@ -1,8 +1,10 @@
+// Implementierung der Verbindung zur DB
 const mysql = require("mysql");
-const dbConfig = require("../../config/db.config.js");
+const dbConfig = require("../../config/db.config.js"); // erzeugen einer Instanz, die die Attribute aus der angegebenen Datei übernimmt
 
 // Create a connection to the database
 const connection = mysql.createConnection({
+    // connection werden die Werte zu den Attributen von dbConfig übergeben
     host: dbConfig.HOST,
     user: dbConfig.USER,
     password: dbConfig.PASSWORD,
@@ -17,5 +19,4 @@ connection.connect(error => {
 
 module.exports = connection;
 
-// https://freiheit.f4.htw-berlin.de/2020/webtech/backend/#datenbank-im-backend-anbinden
-// weiter mit Model erstellen
+

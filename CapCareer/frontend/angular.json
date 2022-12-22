@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "3e4b0b83-983f-486f-b253-a80c26253401"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -101,6 +104,5 @@
         }
       }
     }
-  },
-  "defaultProject": "capcarreer"
+  }
 }

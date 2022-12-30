@@ -22,7 +22,7 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {
     this.readAll();
-    this.readOneQuestion();
+    //this.readOneQuestion();
   }
 
   readAll(): void {

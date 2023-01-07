@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class=".col-7">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src="../assets/image/Logo.jpg" width="20%" alt="Logo">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+          <fieldset class="col-12">
+            <!--nur zur Kontrolle-->
+            <h6><code>Wert von page: {{page}} Länge des questionnaire-Arrays: {{questionnaire.length}}</code></h6>
+            <h6><code>Reihenfolge (sequence-Wert) im questionnaire-Array: {{questionnaire[page].sequence}}, Wert der Variablen anzFragen {{anzFragen}}</code></h6>
+            
+            <div *ngIf="page === 0 else fragen">
+              <p class="begruessung" style="color: #15011d;">
+                Willkomen bei CapCareer, Ihr persönlicher Assistent bei der Jobauswahl.<br>
+                Für AbsolventInnen, StudentInnen, BerufseinsteigerInnen.<br>
+                Sie durchlaufen einen 5min-Test, in dem Sie Fragen beantworten.<br>
+                Nach Abschluss des Tests werden Ihre Antworten ausgewertet
+                und Sie erhalten eine individuelle Auswahl an Jobangeboten.
+              </p>
+            </div>
+            <ng-template #fragen>
+              <div class="col-12">
+              {{questionnaire[page-1].question}}             
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value=""> hier dann so viele Checkboxes und Antworten, wie benötigt.
+                </label>
+              </div>
+            </ng-template>
+            <ng-template #ergebnis [ngIf]="page > anzFragen">
+              <div class="col-12">
+              Hier Ergebnisse             
+              </div>
+            </ng-template>
+            
+          </fieldset>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <div class="col-2">
+            <button type="submit" class="button button4" data-bs-target="quizPageNumber()" (click)="quizPageNumber()">
+              <div *ngIf="page === 0 else weiter">
+                Los geht's
+              </div>
+              <ng-template #weiter>
+                weiter
+              </ng-template>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

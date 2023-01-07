@@ -1,0 +1,44 @@
+<!--Bild-->
+<div class="bg-image"></div>
+
+<div class="container">
+  <div class="row">
+    <!--Bluebox transparent mit CAPCAREER-->
+    <div class="col-3 align-self-start" style="position: relative; bottom: 1px; right: 10rem; left: 0.5rem;">
+      <div id="bluebox" class="text-white" style="position: relative; bottom: 185px;  padding-left: 6rem;">
+        <h1 class="mb-3">CAPCAREER </h1>
+      </div>
+    </div>
+
+    <div id="text" class="col-7 align-self-start" style="position: relative; top: 4rem; right: 10rem; left: 0.5rem;">
+      <p>
+        Du bist bereit, deine Expertise für eine nachhaltige und integrative Zukunft einzusetzen und Teil einer
+        globalen und diversen Community zu werden? Dann finde jetzt deinen neuen Job bei Capgemini. Get The Future You
+        Want.
+      </p>
+    </div>
+
+    <div class="col-2">
+      <button class="button button4" title="Finde deinen Job!" type="button" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">
+        CapCareer ⟶
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <!--nur zu Testzwecken - wie funktioniert reactive form usw-->
+    <!--<app-firstpage></app-firstpage>-->
+  </div>
+</div>
+
+
+<!-- Modal wizzard-->
+<div class="modal fade bd-example-modal-lg" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+  tabindex="-1" aria-hidden="true" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <!--hier wird Komponente detail eingebunden, alle Inhalte dort-->
+    <app-detail></app-detail>
+    
+    
+  </div>
+</div>

@@ -22,6 +22,10 @@ export class BackendService {
     return this.http.get<CurrentQuestion[]>(this.baseUrl + 'current_questionnaireQuestionsText')
   }
 
+  getCurrentQuestionnaireAnswersText(): Observable<CurrentAnswer[]>{
+    return this.http.get<CurrentAnswer[]>(this.baseUrl + 'current_questionnaireAnswersText')
+  }
+
 /*   getCurrentQuestionnaireAnswersText(): Observable<CurrentAnswer[]>{
     return this.http.get<CurrentAnswer[]>(this.baseUrl + 'current_questionnaireAnswersText')
   } */

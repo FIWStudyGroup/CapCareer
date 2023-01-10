@@ -1,45 +1,5 @@
 const CurrentQuestionnaire = require("../models/current_questionnaire.model.js");
 
-
-
-// Create an entry
-exports.create = (req, res) => {
-    // Validate request
-    if (!req.body) {
-        res.status(400).send({
-            message: "Content can not be empty!"
-        });
-    }
-
-    // Create a new one
-    const CurrentQuestionnaire = new CurrentQuestionnaire({
-        question_id: req.body.question_id,
-        sequence: req.body.sequence
-    });
-    
-    // Save a new one in the database
-    CurrentQuestionnaire.create(current_questionnaire, (err, data) => {
-        if (err)
-            res.status(500).send({
-                message:
-                    err.message || "Some error occurred while creating the Skill."
-            });
-        else res.send(data);
-    });
-};
-
-// Retrieve all from the database.
-exports.findAll = (req, res) => {
-    CurrentQuestionnaire.getAll((err, data) => {
-        if (err)
-            res.status(500).send({
-                message:
-                    err.message || "Some error occurred while retrieving."
-            });
-        else res.send(data);
-    });
-};
-
 // Retrieve all from the database.
 exports.findAllQuestionTexts = (req, res) => {
     CurrentQuestionnaire.getAllQuestions((err, data) => {
@@ -53,7 +13,7 @@ exports.findAllQuestionTexts = (req, res) => {
 };
 
 exports.findAllAnswersText = (req, res) => {
-    CurrentQuestionnaire.getAllAnswers((err, data) => {
+    CurrentQuestionnaire.getAllAnswersText((err, data) => {
         if (err)
             res.status(500).send({
                 message:
@@ -95,4 +55,42 @@ exports.delete = (req, res) => {
 // Delete all from the database.
 exports.deleteAll = (req, res) => {
 
+};
+
+// Create an entry
+exports.create = (req, res) => {
+    // Validate request
+    if (!req.body) {
+        res.status(400).send({
+            message: "Content can not be empty!"
+        });
+    }
+
+    // Create a new one
+    const CurrentQuestionnaire = new CurrentQuestionnaire({
+        question_id: req.body.question_id,
+        sequence: req.body.sequence
+    });
+    
+    // Save a new one in the database
+    CurrentQuestionnaire.create(current_questionnaire, (err, data) => {
+        if (err)
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while creating the Skill."
+            });
+        else res.send(data);
+    });
+};
+
+// Retrieve all from the database.
+exports.findAll = (req, res) => {
+    CurrentQuestionnaire.getAll((err, data) => {
+        if (err)
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while retrieving."
+            });
+        else res.send(data);
+    });
 };

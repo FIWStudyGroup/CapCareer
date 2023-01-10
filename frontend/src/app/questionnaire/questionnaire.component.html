@@ -1,0 +1,36 @@
+<div class="modal-body">
+  <div class="form-group">
+  <fieldset class="col-12">
+    <!--nur zur Kontrolle-->
+    <h6><code>Wert von page: {{page}} Länge des questionnaire-Arrays: {{questionnaire.length}}</code></h6>
+    <h6><code>Reihenfolge (sequence-Wert) im questionnaire-Array: {{questionnaire[page].sequence}}, Wert der Variablen anzFragen {{anzFragen}}</code></h6>
+      <div>
+        {{questionnaire[page].question}}             
+      </div>
+      
+      <div *ngFor="let answer of questionnaireA; let i=index"> 
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value=""> {{questionnaireA[page].answer}}
+        </label>
+      </div>
+      </div>
+    
+    
+
+    
+  </fieldset>
+</div>
+</div>
+<div class="modal-footer">
+  <div class="col-2">
+    <button type="submit" class="button button4" data-bs-target="quizPageNumber()" (click)="quizPageNumber()">
+      <div *ngIf="page === 0 else weiter">
+        Los geht's
+      </div>
+      <ng-template #weiter>
+        weiter
+      </ng-template>
+    </button>
+  </div>
+</div>

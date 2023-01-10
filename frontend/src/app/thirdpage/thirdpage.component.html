@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style="background-color: aqua;">
+            <form [formGroup]="questionAnswerForm" (ngSubmit)="onSubmit()">
+                <div class="cart-item" *ngFor="let question of questions">
+                    <textarea>{{ question.question }}</textarea>  
+                </div>
+                  
+                <button class="button" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="col-md3">
+        <h1>Reactive forms<br>Reactive forms provide a model-driven approach to handling form inputs whose values change over time. This guide shows you how to create and update a basic form control, progress to using multiple controls in a group, validate form values, and create dynamic forms where you can add or remove controls at run time.</h1>
+        </div>
+
+    </div>
+    <div class="row">
+
+    </div>
+</div>

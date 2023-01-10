@@ -31,8 +31,8 @@ export class QuestionnaireComponent {
   //singleQuestion!: Question;
   //singleSkill!: Skill;
 
-  showWelcome: boolean = true;
-  showResult: boolean = false;
+
+  show: boolean = false;
 
   
 
@@ -88,14 +88,8 @@ export class QuestionnaireComponent {
 
 
 
-  quizPageNumber(){
-    this.page++;
-    this.anzFragen--;
-    this.showWelcome = false;
-    if (this.anzFragen == 0) {
-      this.showResult = true;
-    }
-      
+  showQuestionnaire() {
+    this.show = true;
   }
 
 }

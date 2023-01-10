@@ -89,6 +89,7 @@ export class QuestionnaireComponent {
 
 
   showQuestionnaire() {
+    // hier Bedingung einbauen??
     this.show = true;
   }
 

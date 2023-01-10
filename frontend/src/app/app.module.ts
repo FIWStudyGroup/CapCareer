@@ -12,6 +12,10 @@ import { HeaderComponent } from './header/header.component';
 import { StartpageComponent } from './startpage/startpage.component';
 import { TableComponent } from './table/table.component';
 import { ThirdpageComponent } from './thirdpage/thirdpage.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { ResultComponent } from './result/result.component';
+import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
+
 
 
 
@@ -24,7 +28,11 @@ import { ThirdpageComponent } from './thirdpage/thirdpage.component';
     HeaderComponent,    
     StartpageComponent,
     TableComponent,
-    ThirdpageComponent    
+    ThirdpageComponent,
+    WelcomeComponent,
+    ResultComponent,
+    QuestionnaireComponent,
+    
   ],
   imports: [
     BrowserModule,

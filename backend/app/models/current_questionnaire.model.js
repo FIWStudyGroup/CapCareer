@@ -7,11 +7,12 @@ const CurrentQuestionnaire = function(current_questionnaire_answer) {
     // um Fragetext zu holen
     this.question = current_questionnaire.question;
     // Tabelle mit Antwort-IDs
-    this.answer_id = current_questionnaire_answers.answer_id;
+    this.answer_id = current_questionnaire_answers_text.answer_id;
+    this.answer = current_questionnaire_answers_text.answer;
     
 };
 
-CurrentQuestionnaire.getAll = result => {
+CurrentQuestionnaire.getQuestionList = result => {
     sql.query("SELECT * FROM current_questionnaire ORDER BY sequence", (err, res) => {
         if (err) {
             console.log("error: ", err);
@@ -37,18 +38,35 @@ CurrentQuestionnaire.getAllQuestions = result => {
 };
 
 // holt alle Answers aus View-Tabelle current_questionnaire_answers_text
-CurrentQuestionnaire.getAllAnswers = result => {
-    sql.query("SELECT sequence, answer_id, answer FROM current_questionnaire_answers_text ORDER BY sequence", (err, res) => {
+CurrentQuestionnaire.getAllAnswersText = result => {
+    sql.query("select * from current_questionnaire_answers_text", (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);
             return;
         }
 
-        console.log("current_questionnaire: ", res);
+        console.log("current_questionnaire_answers: ", res);
         result(null, res);
     });
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

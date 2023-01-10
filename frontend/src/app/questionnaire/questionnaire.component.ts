@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormControl, FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { BackendService } from '../shared/backend.service';
@@ -11,22 +11,18 @@ import { Job } from '../shared/job';
 import { Question } from '../shared/question';
 import { Skill } from '../shared/skill';
 
-
 @Component({
-  selector: 'app-detail',
-  templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css']
+  selector: 'app-questionnaire',
+  templateUrl: './questionnaire.component.html',
+  styleUrls: ['./questionnaire.component.css']
 })
-
-
-export class DetailComponent implements OnInit {
-
+export class QuestionnaireComponent {
   form!: FormGroup; // 
   questionnaire!: CurrentQuestionnaire[]; // question-Array mit aktuellem Fragenkatalog
   questionnaireA!: CurrentAnswer[];
   currentQuestion!: CurrentQuestion;
   currentAnswer!: CurrentAnswer;
-  page = -1;
+  page = 0;
   answerNr = 0; 
   anzFragen! : number;
   id!: number; // Variable für IDs
@@ -35,8 +31,8 @@ export class DetailComponent implements OnInit {
   //singleQuestion!: Question;
   //singleSkill!: Skill;
 
-  showWelcome: boolean = true;
-  showResult: boolean = false;
+
+  show: boolean = false;
 
   
 
@@ -56,7 +52,8 @@ export class DetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getQuestionnaireQ();    
+    this.getQuestionnaireQ();
+    this.getQuestionnaireA();      
   }
 
    getQuestionnaireQ(): void {
@@ -78,49 +75,22 @@ export class DetailComponent implements OnInit {
   // besser versuchen, weniger Interfaces usw.?
   // Außerdem fehlt: wie werden Answers ins Modal geladen (zur aktuellen sequence passend, möglichst auch mit unterschiedlich vielen answers)
 
-/*   getQuestionnaireA(): void {
+   getQuestionnaireA(): void {
     this.bs.getCurrentQuestionnaireAnswersText().subscribe(
       (
-      response: this.CurrentAnswer[]) => {
+      response: CurrentAnswer[]) => {
         this.questionnaireA = response;
         console.log(this.questionnaireA);
         return this.questionnaireA;
       }
     );
-  } */
+  } 
 
 
 
-  quizPageNumber(){
-    this.page++;
-    this.anzFragen--;
-    this.showWelcome = false;
-    if (this.anzFragen == 0) {
-      this.showResult = true;
-    }
-      
-  }
-
-
-
-
-/*
-bei Aufruf: leeres Array erzeugen, in dem die Antworten gespeichert werden
-checkbox der gewählten Antwort meldet zurück: ich bin ausgewählt
-[(1, 2), ...]
-Fkt. muss (1. die Nummer der Frage und) 2. die Nr der Antwort speichern
-*/ 
-
-  readOneJob(id: number): void {
-      this.bs.getOneJob(id).subscribe(
-      (
-        response: Job) => {
-                this.singleJob = response;
-                console.log(this.singleJob);
-                return this.singleJob;
-        },
-        error => console.log(error)
-      );
+  showQuestionnaire() {
+    // hier Bedingung einbauen??
+    this.show = true;
   }
 
 }

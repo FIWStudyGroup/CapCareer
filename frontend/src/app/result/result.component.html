@@ -55,9 +55,29 @@
                 </tr>
             </tbody>
         </table>
-            
+         
+        
+        <div class="table-responsive">
+            <table class="m-3 table table-striped table-hover">
+                <caption>Alle <code>job_posts aus der Datenbank</code></caption>
+                <thead>
+                 
+                </thead>
+                <tbody>
+                    <tr *ngFor="let job of jobs; let i=index; ">
+                        <td>{{ job.id }}</td>
+                        <td>{{ job.ref }}</td>
+                        <td>{{ job.title }}</td>
+                        <td><a [href]="job.url">Link</a></td>
+                        <a [routerLink]="['/job', job.id]"> Detail </a>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
         
     </body>
+    
     
     </html>
 </div>

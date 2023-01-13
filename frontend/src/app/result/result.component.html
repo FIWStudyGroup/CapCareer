@@ -17,47 +17,28 @@
     <body> 
         <h4>Das sind Ihre Ergebnisse:</h4>
        
-        <table class="table table-striped table-hover align-middle">
-            <thead> <!--Überschriften-->
-                <tr>
-                    <th scope="col">Nr</th>
-                    <th scope="col">Titel</th>
-                    <th scope="col">Link</th>
+        
+        <div class="table-responsive">
+            <table class="m-3 table table-striped table-hover">
+                <caption>Alle <code>job_posts aus der Datenbank</code></caption>
+                <thead>
                  
-                </tr>
-                
-            </thead>
-            <tbody id="tbody"> 
-                <tr>
-                    <td>1.</td>
-                    <td>Business Analyst BTS (w/m/d)</td>
-                    <td><a href="https://www.capgemini.com/de-de/jobs/Auw_NIUBJ92CtSm1XrDS/business-analyst-mwd/">Link</a></td>
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>Softwareentwickler (w/m/d)</td>
-                    <td><a href="https://www.capgemini.com/de-de/jobs/AOw_NIUBJ92CtSm1XrC4/softwareentwickler-mwd/">Link</a></td>
-                </tr>
-                <tr>
-                    <td>3.</td>
-                    <td>Business Analyst C & CA (w/m/d)</td>
-                    <td><a href="https://www.capgemini.com/de-de/jobs/Auw_NIUBJ92CtSm1XrDS/business-analyst-mwd/">Link</a></td>
-                </tr>
-                <tr>
-                    <td>4.</td>
-                    <td>UX-Professional (w/m/d)</td>
-                    <td><a href="https://www.capgemini.com/de-de/jobs/-Ow9NIUBJ92CtSm1ia4A/senior-user-experience-designer-wmd/">Link</a></td>
-                </tr>
-                <tr>
-                    <td>5.</td>
-                    <td>Business/Enterprise Architect (w/m/d)</td>
-                    <td><a href="https://www.capgemini.com/de-de/jobs/-L7lcoUBSLVSuyLQhwC8/businessenterprise-it-architekt-telekommunikation-wmd/">Link</a></td>
-                </tr>
-            </tbody>
-        </table>
-            
+                </thead>
+                <tbody>
+                    <tr *ngFor="let job of jobs; let i=index; ">
+                        <td>{{ job.id }}</td>
+                        <td>{{ job.ref }}</td>
+                        <td>{{ job.title }}</td>
+                        <td><a [href]="job.url">Link</a></td>
+                        <a [routerLink]="['/job', job.id]"> Detail </a>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
         
     </body>
+    
     
     </html>
 </div>

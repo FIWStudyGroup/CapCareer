@@ -5,16 +5,17 @@
       <h6><code>Wert von page: {{page}} Länge des questionnaire-Arrays: {{questionnaire.length}}</code></h6>
       <h6><code>Reihenfolge (sequence-Wert) im questionnaire-Array: {{questionnaire[page].sequence}}, Wert der Variablen anzFragen {{anzFragen}}</code></h6>
         <div>
-          {{questionnaire[page].question}}             
+          {{questionnaire[page].question}}
+          <br>
         </div>
-        
-        <div *ngFor="let answer of questionnaireA; let i=index"> 
+
+        <div *ngFor="let answer of questionnaireA; let i=index">
         <div class="checkbox">
           <label>
             <input type="checkbox" value=""> {{questionnaireA[page].answer}}
           </label>
         </div>
-        </div>    
+        </div>
     </fieldset>
 </div>
 </div>
@@ -28,9 +29,9 @@
   <div class="col-2">
         <button type="submit" class="button button4" data-bs-toggle="next" (click)="showQuestionnaire()">
           <!--hier Aufruf questionnaire, evtl. mit Navigationselement o.ä.?-->
-          
+
             weiter
-                                                  
+
         </button>
   </div>
 </div>

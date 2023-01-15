@@ -1,28 +1,29 @@
 <div class="modal-body">
-  <div style=>         
-    Willkomen bei CapCareer, Ihr persönlicher Assistent bei der Jobauswahl.<br>
-    Für AbsolventInnen, StudentInnen, BerufseinsteigerInnen.<br>
-    Sie durchlaufen einen 5min-Test, in dem Sie Fragen beantworten.<br>
+  <div style=>
+    Willkommen bei CapCareer, Ihrem persönlichen Assistenten bei der Jobauswahl.<br>
+    Der Test richtet sich an AbsolventInnen, StudentInnen, BerufseinsteigerInnen.<br>
+    Sie durchlaufen einen 5-Minuten Test, in dem Sie Fragen beantworten.<br>
+    Pro Frage müssen Sie sich für eine Antwortmöglichkeit entscheiden. <br>
     Nach Abschluss des Tests werden Ihre Antworten ausgewertet<br>
     und Sie erhalten eine individuelle Auswahl an Jobangeboten.<br>
     <h4> nur zur Kontrolle</h4>
     <code>Wert von page: {{page}} Länge des questionnaire-Arrays: {{questionnaire.length}} showWelcome {{showWelcome}} showResult: {{showResult}}</code>
-    <br><code>Reihenfolge (sequence-Wert) im questionnaire-Array: {{questionnaire[page].sequence}}, Wert der Variablen anzFragen {{anzFragen}}</code>                    
-                
+    <br><code>Reihenfolge (sequence-Wert) im questionnaire-Array: {{questionnaire[page].sequence}}, Wert der Variablen anzFragen {{anzFragen}}</code>
+
 
                     <!--<div class="form-group row" style="background-color: blueviolet;">
-                  
+
                           <div *ngIf="!showResult else ergebnis" style="background-color: pink;">
-                            {{questionnaire[page].question}} <br>                                     
+                            {{questionnaire[page].question}} <br>
                               <label>
                                 <input type="checkbox" value=""> hier dann so viele Checkboxes und Antworten, wie benötigt.
-                              </label>                                      
-                          </div>  
+                              </label>
+                          </div>
                             <ng-template #ergebnis>
                               <h1>Ergebnisse</h1>
-                            </ng-template> --> 
-                            
-                          
+                            </ng-template> -->
+
+
 
 
                             <div class="modal-footer" style="background-color: blue;">
@@ -31,10 +32,9 @@
                                       <!--hier Aufruf questionnaire, evtl. mit Navigationselement o.ä.?-->
                                       <div>
                                         Los geht's
-                                      </div>                                        
+                                      </div>
                                     </button>
                                     <a routerLink="/questionnaire" aria-current="page" >Home</a>
                                     <!-- ruft questionnaire auf Seite, nicht im Modal auf-->
                               </div>
                             </div>
-      

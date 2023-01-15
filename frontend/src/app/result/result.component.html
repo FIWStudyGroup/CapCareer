@@ -1,7 +1,7 @@
 <div class="modal-body">
     <!DOCTYPE html>
     <html lang="en">
-    
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +13,20 @@
             }
         </style>
     </head>
-    
-    <body> 
+
+    <body>
         <h4>Das sind Ihre Ergebnisse:</h4>
-       
-        
+
+
         <div class="table-responsive">
             <table class="m-3 table table-striped table-hover">
                 <caption>Alle <code>job_posts aus der Datenbank</code></caption>
                 <thead>
-                 
+                 <td>Rolle</td>
+                 <td>Beschreibung</td>
+                 <td>Ref</td>
+                 <td>Standort</td>
+                 <td>Link</td>
                 </thead>
                 <tbody>
                     <tr *ngFor="let job of jobs; let i=index; ">
@@ -35,10 +39,10 @@
                 </tbody>
             </table>
         </div>
-        
-        
+
+
     </body>
-    
-    
+
+
     </html>
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Answer } from '../shared/answer';
 import { BackendService } from '../shared/backend.service';
-import { Job } from '../shared/job';
+//import { Job } from '../shared/job';  // ersetzen durch jobangebot
 import { Question } from '../shared/question';
 import { Skill } from '../shared/skill';
 import { CurrentQuestionnaire } from '../shared/current_questionnaire';
@@ -13,7 +13,7 @@ import { CurrentQuestion } from '../shared/current_question';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  jobs!: Job[];
+   // ersetzen durch jobangebot jobs!: Job[];
   questions!: Question[];
   questionnaire!: CurrentQuestionnaire[];
   currentQuestion!: CurrentQuestion;
@@ -30,7 +30,8 @@ export class TableComponent implements OnInit {
   }
 
   readAll(): void {
-      this.bs.getAllJobs().subscribe( // subscribe-arguments sollen iregdnwie anders angegeben werden, lässt sich auf Anhieb aber nicht auf dieses Problem anwenden
+     // ersetzen durch jobangebot
+/*       this.bs.getAllJobs().subscribe( // subscribe-arguments sollen iregdnwie anders angegeben werden, lässt sich auf Anhieb aber nicht auf dieses Problem anwenden
       (
         response: Job[]) => {
                 this.jobs = response;
@@ -38,7 +39,7 @@ export class TableComponent implements OnInit {
                 return this.jobs;
         },
         error => console.log(error)
-      );
+      ); */
       this.bs.getAllQuestions().subscribe( // subscribe-arguments sollen iregdnwie anders angegeben werden, lässt sich auf Anhieb aber nicht auf dieses Problem anwenden
       (
         response: Question[]) => {

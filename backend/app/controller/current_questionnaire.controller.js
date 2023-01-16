@@ -85,7 +85,7 @@ exports.create = (req, res) => {
 
 // Retrieve all from the database.
 exports.findAll = (req, res) => {
-    CurrentQuestionnaire.getAll((err, data) => {
+    CurrentQuestionnaire.getAllQuestions((err, data) => {
         if (err)
             res.status(500).send({
                 message:

@@ -7,7 +7,7 @@ import { CurrentQuestionnaire } from '../shared/current_questionnaire';
 import { CurrentQuestion } from '../shared/current_question';
 import { CurrentAnswer } from '../shared/currentAnswer';
 import { Answer } from '../shared/answer';
-import { Job } from '../shared/job';
+
 import { Question } from '../shared/question';
 import { Skill } from '../shared/skill';
 
@@ -30,7 +30,7 @@ export class DetailComponent implements OnInit {
   answerNr = 0; 
   anzFragen! : number;
   id!: number; // Variable für IDs
-  singleJob!: Job;
+  
   //answers!: Answer[];
   //singleQuestion!: Question;
   //singleSkill!: Skill;
@@ -111,7 +111,7 @@ checkbox der gewählten Antwort meldet zurück: ich bin ausgewählt
 Fkt. muss (1. die Nummer der Frage und) 2. die Nr der Antwort speichern
 */ 
 
-  readOneJob(id: number): void {
+/*   readOneJob(id: number): void {
       this.bs.getOneJob(id).subscribe(
       (
         response: Job) => {
@@ -121,6 +121,6 @@ Fkt. muss (1. die Nummer der Frage und) 2. die Nr der Antwort speichern
         },
         error => console.log(error)
       );
-  }
+  } */
 
 }

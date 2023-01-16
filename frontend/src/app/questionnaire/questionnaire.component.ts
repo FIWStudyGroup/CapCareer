@@ -6,10 +6,10 @@ import { BackendService } from '../shared/backend.service';
 import { CurrentQuestionnaire } from '../shared/current_questionnaire';
 import { CurrentQuestion } from '../shared/current_question';
 import { CurrentAnswer } from '../shared/currentAnswer';
-import { Answer } from '../shared/answer';
-import { Job } from '../shared/job';
-import { Question } from '../shared/question';
-import { Skill } from '../shared/skill';
+//import { Answer } from '../shared/answer';
+
+//import { Question } from '../shared/question';
+//import { Skill } from '../shared/skill';
 
 @Component({
   selector: 'app-questionnaire',
@@ -26,7 +26,7 @@ export class QuestionnaireComponent {
   answerNr = 0; 
   anzFragen! : number;
   id!: number; // Variable für IDs
-  singleJob!: Job;
+
   //answers!: Answer[];
   //singleQuestion!: Question;
   //singleSkill!: Skill;
@@ -37,7 +37,7 @@ export class QuestionnaireComponent {
   
 
   constructor(
-    private route: ActivatedRoute,
+    //private route: ActivatedRoute,
     private bs: BackendService,
     private builder: FormBuilder
   ) 
@@ -47,7 +47,6 @@ export class QuestionnaireComponent {
         questionControl: ['', Validators.required],
         answerControl: ['', Validators.required]
       }
-
     );
   }
 
@@ -63,17 +62,14 @@ export class QuestionnaireComponent {
         response: CurrentQuestion[]) => {
           this.questionnaire = response;
           this.anzFragen = this.questionnaire.length; 
-          console.log(this.questionnaire);
-          
+          console.log(this.questionnaire);          
           return this.questionnaire;
         },
         error => console.log(error)
       );
-      } 
+   } 
 
-  // Funktioniert nicht, wahrscheinlich sind all die questions, answers und questionnaires auch Quatsch
-  // besser versuchen, weniger Interfaces usw.?
-  // Außerdem fehlt: wie werden Answers ins Modal geladen (zur aktuellen sequence passend, möglichst auch mit unterschiedlich vielen answers)
+
 
    getQuestionnaireA(): void {
     this.bs.getCurrentQuestionnaireAnswersText().subscribe(

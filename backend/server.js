@@ -8,7 +8,8 @@ const bodyParser = require("body-parser"); // ermöglicht Ausgabe als JSON (?)
 app.use(cors());
 
 // hier wird dem express-'Server' gesagt, welche Routen es gibt und wo sie liegen
-require("./app/routes/job_post_wizard.route.js")(app);
+require("./app/routes/rolle.route.js")(app);
+require("./app/routes/job_angebot.route.js")(app);
 require("./app/routes/question.route.js")(app);
 require("./app/routes/answer.route.js")(app);
 require("./app/routes/skill.route.js")(app);

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Job } from './job';
+//import { Job } from './job'; ersetzen durch jobangebot
 import { Question } from './question';
 import { Skill } from './skill';
 import { Answer } from './answer';
@@ -34,10 +34,10 @@ export class BackendService {
     return this.http.get<QuestionAnswer>(this.baseUrl + 'question_answer')
   }
 
-
-  getAllJobs(): Observable<Job[]>{
+ // ersetzen durch jobangebot
+/*   getAllJobs(): Observable<Job[]>{
     return this.http.get<Job[]>(this.baseUrl + 'job_post_wizard');
-  }
+  } */
   getAllQuestions(): Observable<Question[]>{
     return this.http.get<Question[]>(this.baseUrl + 'question');
   }
@@ -48,10 +48,10 @@ export class BackendService {
   getAllSkills(): Observable<Skill[]>{
     return this.http.get<Skill[]>(this.baseUrl + 'skill');
   }
-
-  getOneJob(id: number): Observable<Job>{
+ // ersetzen durch jobangebot
+/*   getOneJob(id: number): Observable<Job>{
     return this.http.get<Job>(this.baseUrl + 'job/id' + id);
-  }
+  } */
 
   getOneQuestion(id: number): Observable<Question>{
     return this.http.get<Question>(this.baseUrl + 'question/id' + id);

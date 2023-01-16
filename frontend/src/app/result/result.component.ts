@@ -1,4 +1,4 @@
-import { Job } from '../shared/job';
+//import { Job } from '../shared/job'; ERSETZEN MIT JobAngebot
 import { BackendService } from '../shared/backend.service';
 import { Component } from '@angular/core';
 
@@ -8,16 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./result.component.css']
 })
 export class ResultComponent {
-  jobs!: Job[];
+  //jobs!: Job[];
 
   constructor(private bs: BackendService) { }
 
   ngOnInit(): void {
-    this.readAll();
+    //this.readAll();
     //this.readOneQuestion();
   }
   
-  readAll(): void {
+/*   readAll(): void {
     this.bs.getAllJobs().subscribe( // subscribe-arguments sollen iregdnwie anders angegeben werden, lässt sich auf Anhieb aber nicht auf dieses Problem anwenden
     (
       response: Job[]) => {
@@ -27,5 +27,5 @@ export class ResultComponent {
       },
       error => console.log(error)
     );
-  }  
+  }   */
 }

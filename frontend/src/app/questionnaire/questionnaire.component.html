@@ -20,7 +20,7 @@
 </div>
 </div>
 
-<!-- Vermutlich hier der Fehler: if-condition darf erst erfüllt sein, wenn letzte Frage erreicht-->
+
 <div class="next">
   <app-result *ngIf="show === true"></app-result>
 </div>
@@ -28,9 +28,7 @@
 <div class="modal-footer">
   <div class="col-2">
         <button type="submit" class="button button4" data-bs-toggle="next" (click)="showQuestionnaire()">
-          <!--hier Aufruf questionnaire, evtl. mit Navigationselement o.ä.?-->
 
-            weiter
 
         </button>
   </div>

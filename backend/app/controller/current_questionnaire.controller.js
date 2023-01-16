@@ -83,7 +83,7 @@ exports.create = (req, res) => {
     });
 };
 
-// Retrieve all from the database.
+// alle questions aus db ACHTUNG: umbenannt, alte Version unten
 exports.findAll = (req, res) => {
     CurrentQuestionnaire.getAllQuestions((err, data) => {
         if (err)
@@ -94,3 +94,15 @@ exports.findAll = (req, res) => {
         else res.send(data);
     });
 };
+
+/*
+exports.findAll = (req, res) => {
+    CurrentQuestionnaire.getAll((err, data) => {
+        if (err)
+            res.status(500).send({
+                message:
+                    err.message || "Some error occurred while retrieving."
+            });
+        else res.send(data);
+    });
+};*/
